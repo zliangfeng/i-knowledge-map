@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "87262e73ef098e3e",
+    "type": "split",
+    "children": [
+      {
+        "id": "dc112348e27e89e1",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "js-skills.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b94bf2b22e096518",
+    "type": "split",
+    "children": [
+      {
+        "id": "071040d0f52f3a8a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b466c229cd2900a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "fb3d9336838086c2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d96c17c69ca984df",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f151c25d7d608d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0c7276797e2c498",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "js-skills.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Untitled.md",
+    "async-loops.md",
+    "clickjacking-attacks.md",
+    "yarnpkg.md"
+  ]
+}
