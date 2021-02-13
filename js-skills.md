@@ -17,3 +17,26 @@ const goToTop = () => window.scrollTo(0, 0);
 ### Naming
 - isXxxExists => hasXxx
 - A/HC/LC Pattern: prefix? + action (A) + high context (HC) + low context? (LC)
+### promise-memoization
+```ts
+import memoize from 'memoizee';
+
+const getUserById = memoize(async (userId: string): Promise<User> => {
+  const user = await request.get(`https://users-service/${userId}`);
+  return user;
+}, { promise: true});
+```
+### exponential backoff retry strategy
+```js
+const callWithProgress = async (fn, status, depth = 0) => {
+	const result = await fn(status);
+  // check completion
+  if (result.progress === 1) { 
+    // finished
+    return result.result;
+  } else { // unfinished
+  	if (depth > 7) { throw result; } 
+  	await wait(2 ** depth * 10);
+  	return callWithProgress(fn, result.progress, depth + 1);
+  }
+}
