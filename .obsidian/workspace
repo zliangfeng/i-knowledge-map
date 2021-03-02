@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "remote-debugging-nodejs-runtime-code-injection.md.md",
+            "file": "ts-skills.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "remote-debugging-nodejs-runtime-code-injection.md.md",
+                "file": "ts-skills.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,12 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "remote-debugging-nodejs-runtime-code-injection.md.md",
+    "ts-skills.md",
     "Untitled.md",
+    "vue-refs-in-render.md",
+    "yarnpkg.md",
+    "todo.md",
     "rxjs101.md.md",
+    "remote-debugging-nodejs-runtime-code-injection.md.md",
     "js-skills.md",
     "async-loops.md",
-    "clickjacking-attacks.md",
-    "yarnpkg.md"
+    "clickjacking-attacks.md"
   ]
 }
