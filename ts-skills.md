@@ -38,3 +38,76 @@ const controller = new AbortController();
 const { signal } = controller;
 el.addEventListener(name, callback, { signal });
 ```
+
+### type
+```ts
+/*class BeeKeeper {
+
+hasMask: boolean;
+
+}
+
+class ZooKeeper {
+
+nametag: string;
+
+}
+
+class Animal {
+
+numLegs: number;
+
+}
+
+class Bee extends Animal {
+
+keeper: BeeKeeper;
+
+}
+
+class Lion extends Animal {
+
+keeper: ZooKeeper;
+
+}*/
+function createInstance<A extends Animal>(c: new () => A): A {
+
+return new c();
+
+}
+//createInstance(Lion).keeper.nametag;
+
+//createInstance(Bee).keeper.hasMask;
+```
+
+```ts
+interface {
+	fn(): void;
+	foo: string;
+	bar: number;
+}
+
+// SomeType extends OtherType ? TrueType : FalseType;
+type NameOrId<T extends number | string\> = T extends number
+
+? IdLabel
+
+: NameLabel;
+			  
+function createLabel<T extends number | string\>(idOrName: T): NameOrId<T\> {
+
+throw "unimplemented";
+
+}
+
+let a = createLabel("typescript");
+
+// ^ = let a: NameLabel
+
+let b = createLabel(2.8);
+
+// ^ = let b: IdLabel
+
+let c = createLabel(Math.random() ? "hello" : 42);
+
+// ^ = let c: NameLabel | IdLabel

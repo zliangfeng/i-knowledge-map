@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ts-skills.md",
+            "file": "javascript-event-loop-call-stack.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ts-skills.md",
+                "file": "javascript-event-loop-call-stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -77,8 +77,17 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "1fa25de175a59604",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,15 +95,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "ts-skills.md",
-    "Untitled.md",
-    "vue-refs-in-render.md",
-    "yarnpkg.md",
-    "todo.md",
-    "rxjs101.md.md",
-    "remote-debugging-nodejs-runtime-code-injection.md.md",
+    "javascript-event-loop-call-stack.md",
+    "javascript-memory-management.md",
     "js-skills.md",
-    "async-loops.md",
-    "clickjacking-attacks.md"
+    "LongPolling-vs-WebSocket-vs-EventSource.md",
+    "nodejs-user-authentication.md",
+    "obj-proto-vs-fn-prototype.md",
+    "offline-install-npm.md",
+    "organize-large-react-application.md",
+    "pixel-perfection.md",
+    "protobuf.md"
   ]
 }
