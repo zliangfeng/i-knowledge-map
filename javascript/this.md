@@ -26,4 +26,8 @@ myObject.method([]); // logs "myObject"
 // 这里将method赋值给一个变量，在浏览器运行的时候，上下文就变成了 window
 const myObjectMethod = myObject.method;
 myObjectMethod([]); // logs "window"
+
+const $ = document.querySelector.bind(document);
+// or
+const $ = (...args) => document.querySelector(...args);
 ```
