@@ -1,0 +1,2 @@
+- git squash merge: keep version control history clean and readable
+- `git checkout -b new_branch` 新建branch
