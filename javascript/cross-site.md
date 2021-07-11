@@ -3,6 +3,7 @@
 ## refs
 
 - [AJAX 与跨域通信（二）：跨域解决方案](https://cloud.tencent.com/developer/article/1536496)
+- [跨域请求设置为 * Firefox 不生效请求失败](https://www.jianshu.com/p/292b6d911a56)
 
 ## content
 
@@ -31,4 +32,4 @@ document.body.insertBefore(script,document.body.firstChild);
   - 适用于主域相同、子域不同的两个域之间的跨域通信
 
 - window.name
-  - 
+  - window 对象有个 name 属性，在一个窗口的生命周期内，window.name 会被该窗口的所有页面所共享、所读写，不管这些页面是同源还是不同源
