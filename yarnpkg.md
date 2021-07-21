@@ -1,7 +1,9 @@
 # yarnpkg
 
 ## 指定依赖/子依赖版本|覆盖特定嵌套依赖项的版本
+
 package.json
+
 ```json
 {
   "name": "project",
@@ -17,7 +19,9 @@ package.json
   }
 }
 ```
+
 之后执行 yarn install
 
 ## 替换 lodash/moment
+
 // todo
