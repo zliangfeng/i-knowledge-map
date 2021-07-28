@@ -22,3 +22,5 @@
 ### useful commons
 
 - [x] `git checkout -b new_branch` 新建branch
+- [x] `git ls-files -v | grep ^h` show files has “assume unchanged” bit set
+
