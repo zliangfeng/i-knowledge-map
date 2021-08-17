@@ -5,6 +5,7 @@
 - <https://www.jianshu.com/p/e2cdc78ff47c>
 - <https://www.smashingmagazine.com/2021/06/web-workers-2021/>
 - <https://surma.dev/things/omt-for-three-xr/index.html>
+- <https://yarin.dev/nodejs-cpu-bound-tasks-worker-threads/>
 
 ## web worker
 
@@ -71,3 +72,37 @@ div {
 ```
 
 > worklet 与浏览器的渲染管道挂钩，使我们能够对浏览器的渲染过程（例如样式和布局）进行低级访问；
+
+## For NodeJS: child_process
+
+```js
+const http = require('http');
+const path = require('path');
+const { fork } = require('child_process');
+
+const port = 3000;
+
+http
+  .createServer((req, res) => {
+    const url = new URL(req.url, `http://${req.headers.host}`);
+    console.log('Incoming request to:', url.pathname);
+
+    if (url.pathname === '/fibonacci') {
+      const n = Number(url.searchParams.get('n'));
+      console.log('Calculating fibonacci for', n);
+
+      const childProcess = fork(path.join(__dirname, 'fibonacci-fork'));
+
+      childProcess.on('message', (message) => {
+        res.writeHead(200);
+        return res.end(`Result: ${message}`);
+      });
+
+      childProcess.send(n);
+    } else {
+      res.writeHead(200);
+      return res.end('Hello World!');
+    }
+  })
+  .listen(port, () => console.log(`Listening on port ${port}...`));
+```
