@@ -1,5 +1,37 @@
-# webpack 模块
+# webpack 模块加载原理
 
 ## commonJS
+
+- 复习：require 相当于其他语言的内联（inline），同步
+- 简化模型
+
+```js
+(function(modules) {
+  // the module cache
+  var installedModules = {};
+
+  // the require function
+  function __webpack_require__(moduleId) {
+    // …
+  }
+  // load entry module and return exports
+  return __webpack_pack__(__webpack_require__.s = "./src/index.js")
+})({
+  // pathX: functionX
+  "./src/index.js": (function(module, exports, __webpack_require__){
+    eval(/*webpack eval code*/);
+  }),
+
+})
+
+// webpack eval code format
+const test2 = __webpack_require__("./src/test2.js\")"
+function test() {}
+test()
+test2()
+```
+
+> 小结：webpack 对源码用 webapck_require 封装后，再通过 eval 引入
+
 
 ## ES6 module
