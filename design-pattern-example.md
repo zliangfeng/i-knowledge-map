@@ -1,5 +1,5 @@
 - simple factory pattern
-  Java加密技术
+  Java 加密技术
 - factory method pattern
   jdbc/logger
 - abstract factory
@@ -9,6 +9,6 @@
 - 单例模式
   OS print spooler
   序列器
-// “合成复用原则”，组合优于继承
+  // “合成复用原则”，组合优于继承
 - Adapter
   jdbc
