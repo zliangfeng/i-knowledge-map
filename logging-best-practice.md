@@ -1,0 +1,1 @@
+https://tuhrig.de/my-logging-best-practices/
