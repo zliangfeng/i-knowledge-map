@@ -24,3 +24,9 @@
 - [x] `git checkout -b new_branch` 新建branch
 - [x] `git ls-files -v | grep ^h` show files has “assume unchanged” bit set
 
+### git config
+
+- core.editor=code --wait
+- alias.fastci=commit -a --no-verify
+
+
