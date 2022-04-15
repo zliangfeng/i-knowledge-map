@@ -37,16 +37,15 @@ test2()
 
 > 小结：webpack 对源码用 webapck_require 封装后，再通过 eval 引入
 
-
 ## ES6 module
 
 - 打包后的代码与 commonJS 绝大部分一致
-- 差异：多了 __webpack_require__.n 分析 export 对象是否是 ES6 module，如果是则返回 module["default"]，否则返回 export
+- 差异：多了 \_\_webpack_require\_\_.n 分析 export 对象是否是 ES6 module，如果是则返回 module["default"]，否则返回 export
 
 ## 按需加载
 
-- 多了核心函数 __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, "./src/test2.js"))
+- 多了核心函数 \_\_webpack_require\_\_.e(chunkId).then(\_\_webpack_require\_\_.bind(null, "./src/test2.js"))
 - e() 下载动态资源，执行返回第一次为 undefined，新建 Promise 用于加载远程 js 资源
 - 返回 0 代表加载成功
 - 返回其他表示加载中，将这个加载中的 Promise 推入 promises 数组（类似 call queue）
-- TODO: 加载 <script src="0.bundle.js" charset="utf-8" nonce /> 
+- TODO: 加载 `<script src="0.bundle.js" charset="utf-8" nonce />`
