@@ -2,6 +2,7 @@
 
 ## refs
 
+- [Cross Site Resource Share 动图详解](https://dev.to/lydiahallie/cs-visualized-cors-5b8h)
 - [AJAX 与跨域通信（二）：跨域解决方案](https://cloud.tencent.com/developer/article/1536496)
 - [跨域请求设置为 * Firefox 不生效请求失败](https://www.jianshu.com/p/292b6d911a56)
 
@@ -24,7 +25,9 @@ document.body.insertBefore(script,document.body.firstChild);
 
 - CORS
   - 简单请求: {head|post|get} 携带的头信息仅限于 {Accept|Accept-Language|Content-Language|Last-Event-ID|Content-Type{application/x-www-form-urlencoded|multipart/form-data|text/plain}，CORS的时候header额外携带origin字段；
-  - 非简单请求：preflight request;
+  - 非简单请求：通过 {option} 发送 preflight request;
+  - 服务端发送响应 `response.setHeader("Access-Control-Allow-Origin", "DomainB or *")`
+    - 另外还有 `Access-Control-Allow-Header` `Access-Control-Allow-Method` 指定 CORS 响应头/HttpMethod
 
 - 图像 ping
 
