@@ -15,6 +15,7 @@
 - gRPC (gRPC Remote Procedure Calls) 是 Google 发起的一个开源远程过程调用 (Remote procedure call) 系统；
   - Information is serialized into a compact collection of bits and then sent over the network. Then, when the bits reach the target destination they are deserialized back into text.
   - Protocol Buffers - gRPC_Schema.proto file: 该文件可以类比接口文件，描述了 rpc 的版本/请求响应/methods 等
+  - 基于 HTTP/2 传输，适用于微服务生态，目前浏览器（作为gRPC client端，没有兼容Protocol Buffers协议，但可以在服务端构建 gRPC-web 代理）尚不支持
 
 ```proto
 syntax = "proto3";
